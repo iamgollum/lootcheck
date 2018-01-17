@@ -4,6 +4,7 @@ import App from '../components/App';
 
 describe('App', () => {
     const app = shallow(<App />);
+    //console.log(app.debug())
 
     it('renders properly', () => {
         expect(app).toMatchSnapshot()
