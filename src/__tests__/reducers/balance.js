@@ -17,4 +17,23 @@ describe('balance reducer', () => {
         const actionData = { type: constants.DEPOSIT, deposit };
         expect(balanceReducer(initialData, actionData)).toEqual(deposit + initialData)
     })
+
+    describe('withdrawal', () => {
+        
+        const withdrawal = 10;
+
+        it('occurs when there is enouph balance', () => {
+            const initialData = 10;
+
+            const actionData = {type: constants.WITHDRAW, withdrawal};
+            expect(balanceReducer(initialData, actionData)).toEqual(initialData - withdrawal)
+        })
+
+        it('does not occur when there is not enough balance', () => {
+            const initialData = 5;
+
+            const actionData = {type: constants.WITHDRAW, withdrawal};
+            expect(balanceReducer(initialData, actionData)).toEqual(initialData)
+        })
+    })
 })
