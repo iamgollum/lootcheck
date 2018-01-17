@@ -20,4 +20,3 @@ export const withdraw = withdrawal => {
         withdrawal
     }
 };
-
