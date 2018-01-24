@@ -8,6 +8,8 @@ import App from './components/App';
 
 import rootReducer from './reducers';
 
+import './index.css';
+
 render(
     <Provider store={createStore(rootReducer, applyMiddleware(thunk))}>
         <App />

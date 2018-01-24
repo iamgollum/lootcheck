@@ -21,7 +21,7 @@ export class Wallet extends Component {
     render() {
         return (
             <div>
-                <h3 className='balance'>Wallet Balance: {this.props.balance}</h3>
+                <h3 className='balance'>Wallet Balance: <span>{this.props.balance}</span></h3>
                 <input className='input-wallet' onChange={this.updateBalance} />
                 <button className="btn-deposit" onClick={this.deposit} >Deposit</button>
                 <button className="btn-withdraw" onClick={this.withdraw} >Withdraw</button>
